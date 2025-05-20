@@ -186,6 +186,13 @@ button:focus-visible {
   list-style-type: none; 
   text-align: left; 
   background-color: var(--sidebar-primary);
+  border-radius: 0rem 0.6rem 0.6rem 0rem;
+  transition-duration: 500ms;
+  transition-delay: 100ms;
+}
+
+.sidebar:hover{
+  border-radius: 0rem 0.2rem 0.2rem 0rem;
 }
 
 .sidebar-head{
@@ -216,6 +223,14 @@ button:focus-visible {
   white-space: nowrap; 
   background-color: var(--sidebar-foreground);
   color: var(--sidebar-primary-foreground);
+  transition-duration: 500ms;
+  transition-delay: 50ms;
+}
+
+.sidebar-list-item:hover{
+  background-color: var(--sidebar-primary-foreground);
+  color: var(--sidebar-foreground);
+  border-radius: 0.05rem;
 }
 
 .sidebar-icon{
