@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
 @tailwind utilities;
@@ -172,4 +175,51 @@ button:focus-visible {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.sidebar{
+  display: flex; 
+padding: 0.75rem; 
+flex-direction: column; 
+row-gap: 1rem; 
+height: 100%; 
+list-style-type: none; 
+text-align: left; 
+background-color: var(--sidebar-primary);
+}
+
+.sidebar-head{
+  padding: 0.5rem; 
+flex: 1 1 0%; 
+height: 20%; 
+text-align: center; 
+}
+
+.sidebar-head-title{
+  color: transparent; 
+vertical-align: middle; 
+background-clip: text; 
+background-color: var(--sidebar-primary-foreground); 
+}
+
+.sidebar-list{
+  display: flex; 
+flex-direction: column; 
+row-gap: 0.5rem; 
+height: 80%; 
+
+}
+
+.sidebar-list-item{
+  padding: 0.375rem; 
+flex: 0 1 auto; 
+border-radius: 0.5rem; 
+height: min-content; 
+white-space: nowrap; 
+background-color: var(--sidebar-foreground);
+color: var(--sidebar-primary-foreground);
+}
+
+.sidebar-icon{
+  
 }

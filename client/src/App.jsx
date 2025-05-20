@@ -3,6 +3,7 @@ import { fetchUsers } from './services/api'
 import viteLogo from '/vite.svg'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import Layout from './layout'
 
 export default function App() {
   
@@ -25,11 +26,10 @@ export default function App() {
 
   return (
     <>
-      <div>
-        <button className="px-6 py-2 mt-6 font-semibold text-blue-500 transition-all duration-300 bg-white rounded-full shadow hover:bg-purple-100">
-          Login
-        </button>
-      </div>
+      <Layout>
+        
+      </Layout>
+      
       
       {/*}
       <h2 className="mt-6 mb-2">Użytkownicy:</h2>
