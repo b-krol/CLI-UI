@@ -195,6 +195,13 @@ button:focus-visible {
   border-radius: 0rem 0.2rem 0.2rem 0rem;
 }
 
+.sidebar-separator{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  border-width: 0.01rem;
+  border-style: dotted;
+  border-radius: 5px;
+}
+
 .sidebar-head{
   padding: 0.5rem; 
   flex: 1 1 0%; 

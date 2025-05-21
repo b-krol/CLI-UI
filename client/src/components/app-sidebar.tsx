@@ -19,6 +19,7 @@ export function AppSidebar() {
       <ul className="sidebar-head">
         <h1 className="sidebar-head-text">Menu</h1>
       </ul>
+      <hr className="sidebar-separator"/>
       <ul className="sidebar-list">
         {listItems.map((item) => (
           <li className="sidebar-list-item">
@@ -27,6 +28,7 @@ export function AppSidebar() {
           </li>
         ))}
       </ul>
+      <hr className="sidebar-separator"/>
       <ul className="sidebar-footer">
         <h4 className="sidebar-footer-text">Menuend</h4>
       </ul>
