@@ -15,7 +15,7 @@ export default function Layout() {
           expanded ? "f-full" : "h-min"
         }`}
       />
-      <div className="w-9/12 grow h-full">
+      <div className="w-9/12 min-w-fit flex-1 grow h-full">
         <Outlet />
       </div>
     </div>
