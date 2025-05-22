@@ -1,7 +1,8 @@
+import { Outlet } from "react-router-dom";
 import { AppSidebar } from "@/components/app-sidebar";
 import React from "react";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
   const [expanded, setExpanded] = React.useState(true);
 
   return (
@@ -9,10 +10,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <AppSidebar
         expanded={expanded}
         setExpanded={setExpanded}
-        className={`${expanded ? 'w-3/12' : 'w-min'} ${expanded ? 'f-full' : 'h-min'}`}
+        className={`min-w-fit
+          ${expanded ? "w-3/12" : "w-min"} ${
+          expanded ? "f-full" : "h-min"
+        }`}
       />
       <div className="w-9/12 grow h-full">
-        Content
+        <Outlet />
       </div>
     </div>
   );

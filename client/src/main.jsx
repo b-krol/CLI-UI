@@ -8,10 +8,8 @@ import 'rsuite/dist/rsuite.min.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
     <CustomProvider theme='dark'>
       <App />
     </CustomProvider>
-    </BrowserRouter>
   </React.StrictMode>
 )

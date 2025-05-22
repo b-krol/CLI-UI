@@ -1,51 +1,23 @@
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { fetchUsers } from './services/api'
-import viteLogo from '/vite.svg'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import Layout from './layout'
 
-export default function App() {
-  
-  const [count, setCount] = useState(0)
-  const [users, setUsers] = useState([])
+//temporary
+import ContentExample from './components/ContentExample'
+import ContentExample2 from './components/ContentExample2'
 
-  useEffect(() => {
-    fetchUsers()
-      .then(data => {
-        console.log('Odpowiedź z API:', data)
-        // jeśli `data` to obiekt z kluczem `users`, użyj data.users
-        setUsers(Array.isArray(data) ? data : data.users || [])
-      })
-      .catch(err => {
-        console.error('Błąd pobierania użytkowników:', err)
-        setUsers([]) // fallback na pustą tablicę
-      })
-  }, [])
-  
+export default function App() {
 
   return (
-    <>
-      <Layout>
-        
-      </Layout>
-      
-      
-      {/*}
-      <h2 className="mt-6 mb-2">Użytkownicy:</h2>
-      <ul className="list-disc list-inside">
-        {Array.isArray(users) && users.length > 0 ? (
-          users.map(u => <li key={u.id}>{u.name}</li>)
-        ) : (
-          <li>Brak użytkowników</li>
-        )}
-      </ul>
-
-      <p className="mt-8 read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      */}
-      
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<ContentExample />} />
+          <Route path="/ContentExample2" element={<ContentExample2 />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
