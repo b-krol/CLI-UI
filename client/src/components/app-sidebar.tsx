@@ -7,6 +7,7 @@ import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
 import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const listItems = [
@@ -38,12 +39,12 @@ export function AppSidebar({
   return (
     <div className={className}>
       <Sidenav expanded={expanded} defaultOpenKeys={['3', '4']} className='sidenav will-change-contents h-full max-h-dvh' style={{ direction: 'rtl' }}>
-        <Sidenav.Body className='h-full overflow-y-auto scroll-auto will-change-scroll snap-y'>
+        <Sidenav.Body className='h-full overflow-y-auto scroll-smooth will-change-scroll snap-y'>
           <Nav activeKey={activeKey} onSelect={setActiveKey} style={{ direction: 'ltr' }}>
-            <Nav.Item className='snap-start' eventKey="1" icon={<WechatCustomerOutlineIcon />}>
+            <Nav.Item as={Link} to="/Chat" className='snap-start' eventKey="1" icon={<WechatCustomerOutlineIcon />}>
               Chat
             </Nav.Item>
-            <Nav.Item className='snap-start' eventKey="2" icon={<ToolsIcon />}>
+            <Nav.Item as={Link} to="/Configuration" className='snap-start' eventKey="2" icon={<ToolsIcon />}>
               Configuration
             </Nav.Item>
             <Nav.Menu className='snap-start' placement="rightStart" eventKey="3" title="Run" icon={<CodeIcon />}>
