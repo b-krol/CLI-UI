@@ -1,4 +1,8 @@
 import { Sidenav, Nav, Toggle } from 'rsuite';
+import WechatCustomerOutlineIcon from '@rsuite/icons/WechatCustomerOutline';
+import ToolsIcon from '@rsuite/icons/Tools';
+import CodeIcon from '@rsuite/icons/Code';
+import SettingIcon from '@rsuite/icons/Setting';
 import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
 import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
@@ -33,22 +37,29 @@ export function AppSidebar({
 
   return (
     <div className={className}>
-      <Sidenav expanded={expanded} defaultOpenKeys={['3', '4']} className='h-full'>
-        <Sidenav.Body className='h-full'>
-          <Nav activeKey={activeKey} onSelect={setActiveKey}>
-            <Nav.Item eventKey="1" icon={<DashboardIcon />}>
-              Dashboard
+      <Sidenav expanded={expanded} defaultOpenKeys={['3', '4']} className='sidenav will-change-contents h-full max-h-dvh' style={{ direction: 'rtl' }}>
+        <Sidenav.Body className='h-full overflow-y-auto scroll-auto will-change-scroll snap-y'>
+          <Nav activeKey={activeKey} onSelect={setActiveKey} style={{ direction: 'ltr' }}>
+            <Nav.Item className='snap-start' eventKey="1" icon={<WechatCustomerOutlineIcon />}>
+              Chat
             </Nav.Item>
-            <Nav.Item eventKey="2" icon={<GroupIcon />}>
-              User Group
+            <Nav.Item className='snap-start' eventKey="2" icon={<ToolsIcon />}>
+              Configuration
             </Nav.Item>
-            <Nav.Menu placement="rightStart" eventKey="3" title="Advanced" icon={<MagicIcon />}>
-              <Nav.Item eventKey="3-1">Geo</Nav.Item>
-              <Nav.Item eventKey="3-2">Devices</Nav.Item>
-              <Nav.Item eventKey="3-3">Loyalty</Nav.Item>
-              <Nav.Item eventKey="3-4">Visit Depth</Nav.Item>
+            <Nav.Menu className='snap-start' placement="rightStart" eventKey="3" title="Run" icon={<CodeIcon />}>
+              <Nav.Item eventKey="3-1">Help</Nav.Item>
+              <Nav.Item eventKey="3-2">Version</Nav.Item>
+              <Nav.Item eventKey="3-3">Show schema</Nav.Item>
+              <Nav.Item eventKey="3-4">Extract schema</Nav.Item>
+              <Nav.Item eventKey="3-5">Output file</Nav.Item>
+              <Nav.Item eventKey="3-6">Token</Nav.Item>
+              <Nav.Item eventKey="3-7">API key</Nav.Item>
+              <Nav.Item eventKey="3-8">API url</Nav.Item>
+              <Nav.Item eventKey="3-9">SSO url</Nav.Item>
+              <Nav.Item eventKey="3-10">Login</Nav.Item>
+              <Nav.Item eventKey="3-11">Test authentication</Nav.Item>
             </Nav.Menu>
-            <Nav.Menu
+            <Nav.Menu className='snap-start'
               placement="rightStart"
               eventKey="4"
               title="Settings"

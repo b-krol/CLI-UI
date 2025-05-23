@@ -11,6 +11,9 @@
 --rs-primary-700: #1054de;
 --rs-primary-800: #0640bf;
 --rs-primary-900: #002d96;
+
+--scrollbar-thumb: var(--rs-sidenav-default-text);
+  --scrollbar-track: var(--rs-sidenav-default-bg);
 }
 
 .rs-theme-dark {
@@ -24,6 +27,9 @@
 --rs-primary-700: #1054de;
 --rs-primary-800: #0640bf;
 --rs-primary-900: #002d96;
+
+--scrollbar-thumb: var(--rs-sidenav-default-text);
+  --scrollbar-track: var(--rs-sidenav-default-bg);
 }
 
 @import "tailwindcss";
@@ -31,6 +37,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sidenav {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+.sidenav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidenav::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 6px;
+}
 
 a {
   font-weight: 500;
