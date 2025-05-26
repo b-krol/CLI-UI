@@ -44,10 +44,20 @@ export function AppSidebar({
             <Nav.Item as={Link} to="/Chat" className='snap-start' eventKey="1" icon={<WechatCustomerOutlineIcon />}>
               Chat
             </Nav.Item>
-            <Nav.Item as={Link} to="/Configuration" className='snap-start' eventKey="2" icon={<ToolsIcon />}>
-              Configuration
-            </Nav.Item>
-            <Nav.Menu className='snap-start' placement="rightStart" eventKey="3" title="Run" icon={<CodeIcon />}>
+            <Nav.Menu eventKey="2" title="Configuration" className='snap-start' icon={<ToolsIcon />}>
+              <Nav.Item divider />
+              <Nav.Item eventKey="2-1" as={Link} to="/NewConfiguration">
+                Create new Configuration
+              </Nav.Item>
+              <Nav.Item eventKey="2-2" as={Link} to="/NewConfiguration">{/* TODO insert path to subpage or add action */}
+                Import Configuration
+              </Nav.Item>
+              <Nav.Item divider />
+              <Nav.Item panel>Available configurations</Nav.Item>
+              {/* TODO insert component containing list of available configurations */}
+              <Nav.Item divider />
+            </Nav.Menu>
+            <Nav.Menu eventKey="3" title="Run" className='snap-start' placement="rightStart" icon={<CodeIcon />}>
               <Nav.Item eventKey="3-1">Help</Nav.Item>
               <Nav.Item eventKey="3-2">Version</Nav.Item>
               <Nav.Item eventKey="3-3">Show schema</Nav.Item>

@@ -7,7 +7,7 @@ import Layout from './layout'
 //temporary
 import ContentExample from './components/ContentExample'
 import ContentExample2 from './components/ContentExample2'
-import Configuration from './components/Configuration'
+import ConfigurationCreationForm from './components/ConfigurationCreationForm'
 
 export default function App() {
 
@@ -17,8 +17,8 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<ContentExample />} />
           <Route path="/ContentExample2" element={<ContentExample2 />} />
-          <Route path="/Configuration" element={<Configuration/>} />
-          <Route path="/Chat" element={<Configuration/>} />
+          <Route path="/NewConfiguration" element={<ConfigurationCreationForm/>} />
+          <Route path="/Chat" element={<ConfigurationCreationForm/>} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -70,7 +70,7 @@ const selectConf = ["conf1", "conf2", "conf3", "conf4", "conf5", "conf6"].map(
   })
 );
 
-export default function Configuration() {
+export default function ConfigurationCreationForm() {
   //Update value to load specific parts of the form
   const [selectedDatabaseEngine, setSelectedDatabaseEngine] = useState(
     defaultSelectedDatabaseEngineValue
@@ -231,22 +231,6 @@ export default function Configuration() {
         </Form.Group>
           </Form>
         )}
-
-
-
-        {/* Temporary testing ground */}
-        <Form.Group controlId="selectPicker">
-          <Form.ControlLabel>Select configuration:</Form.ControlLabel>
-          <Form.Control
-            name="selectConfiguration"
-            accepter={SelectPicker}
-            data={selectConf}
-            onChange={handleMongodbUseConnectionStringChange}
-          />
-          <Form.HelpText tooltip>
-            Select from pre-made configurations
-          </Form.HelpText>
-        </Form.Group>
       </Form>
     </Panel>
   );
