@@ -47,15 +47,14 @@ export function AppSidebar({
             <Nav.Menu eventKey="2" title="Configuration" className='snap-start' icon={<ToolsIcon />}>
               <Nav.Item divider />
               <Nav.Item eventKey="2-1" as={Link} to="/NewConfiguration">
-                Create new Configuration
+                Create new configuration
               </Nav.Item>
               <Nav.Item eventKey="2-2" as={Link} to="/NewConfiguration">{/* TODO insert path to subpage or add action */}
-                Import Configuration
+                Import configuration
               </Nav.Item>
-              <Nav.Item divider />
-              <Nav.Item panel>Available configurations</Nav.Item>
-              {/* TODO insert component containing list of available configurations */}
-              <Nav.Item divider />
+              <Nav.Item eventKey="2-3" as={Link} to="/NewConfiguration">{/* TODO insert path to subpage or add action */}
+                Manage configurations
+              </Nav.Item>
             </Nav.Menu>
             <Nav.Menu eventKey="3" title="Run" className='snap-start' placement="rightStart" icon={<CodeIcon />}>
               <Nav.Item eventKey="3-1">Help</Nav.Item>

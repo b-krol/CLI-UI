@@ -24,7 +24,7 @@ const mysqlDefaultPort = 3306;
 const postgresqlDefaultPort = 5432;
 const mongodbUseConnectionStringDefaultChecked = false;
 
-//Database engines data tree
+//Database engines data tree (set on 26th may 2025)
 const availableDatabases = [
   {
     typeLabel: "SQL",
