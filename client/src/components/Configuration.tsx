@@ -183,9 +183,8 @@ export default function Configuration() {
             <Form.Group controlId="mysqlORpostgresqlPasswordInput">
               <Form.ControlLabel>Password:</Form.ControlLabel>
               <InputGroup>
-                <Form.Control
+                <Input
                   name="mysqlORpostgresqlPasswordName"
-                  accepter={Input}
                   type={visibleDatabasePassword ? "text" : "password"}
                 />
                 <InputGroup.Addon>
