@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { AppSidebar } from "@/components/app-sidebar";
+import { AppSidebar } from "../components/AppSidebar";
 import React from "react";
 
 export default function Layout() {
