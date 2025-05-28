@@ -52,7 +52,7 @@ export function AppSidebar({
               <Nav.Item eventKey="2-2" as={Link} to="/NewConfiguration">{/* TODO insert path to subpage or add action */}
                 Import configuration
               </Nav.Item>
-              <Nav.Item eventKey="2-3" as={Link} to="/NewConfiguration">{/* TODO insert path to subpage or add action */}
+              <Nav.Item eventKey="2-3" as={Link} to="/ManageConfigurations">{/* TODO insert path to subpage or add action */}
                 Manage configurations
               </Nav.Item>
             </Nav.Menu>
