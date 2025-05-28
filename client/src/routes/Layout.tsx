@@ -11,12 +11,12 @@ export default function Layout() {
         expanded={expanded}
         setExpanded={setExpanded}
         className={`min-w-fit
-          ${expanded ? "w-3/12" : "w-min"} ${
-          expanded ? "f-full" : "h-min"
+          ${expanded ? "w-3/12" : "w-fit"} ${
+          expanded ? "h-full" : "h-min"
         }`}
       />
       <div className="w-9/12 min-w-fit flex-1 grow h-full">
-        <Outlet />
+        <Outlet />{/* rest of the content on a page */}
       </div>
     </div>
   );
